@@ -69,6 +69,7 @@ const AadhaarCompare = ({ open, setOpen, aadhaarDetails }) => {
 
   // Fields to be compared
   const getComparisonFields = (lead, aadhaarDetails) => {
+    console.log("Aadhar Detials ",aadhaarDetails)
     const { house, po, dist, state, country, street, pc } = aadhaarDetails?.address
 
     const formatAddress = (...parts) => parts.filter(Boolean).join(", "); // Join only non-empty values with commas

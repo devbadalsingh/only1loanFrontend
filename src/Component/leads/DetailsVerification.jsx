@@ -75,7 +75,8 @@ const VerifyContactDetails = ({ isMobileVerified, isEmailVerified, isAadhaarVeri
     }
     if (aadhaarDetails && aadhaarDetailsSuccess && !isAadhaarDetailsFetching) {
       setOpenAadhaarCompare(true)
-      setAadhaarData(aadhaarDetails?.data?.details)
+      console.log('first called ',aadhaarDetails)
+      setAadhaarData(aadhaarDetails?.data)
     }
   }, [aadhaarRes.data, aadhaarRes?.isSuccess,aadhaarRes.isFetching, aadhaarDetails, aadhaarDetailsSuccess, isAadhaarDetailsFetching])
 
